@@ -55,6 +55,12 @@
             scroll-padding-top: 5.5rem;
         }
 
+        @media (min-width: 1536px) {
+            html {
+                scroll-padding-top: 12rem;
+            }
+        }
+
         body {
             background-color: #F0F9FF;
             color: #0C4A6E;
@@ -202,39 +208,45 @@
                     </div>
                 </div>
 
-                <!-- Desktop Navigation Tabs -->
-                <nav class="hidden xl:flex space-x-2">
-                    <button onclick="switchTab('home')" id="tab-home" class="tab-btn active px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 text-skybrand-800 hover:text-skybrand-900 hover:bg-ice-200">
-                        <i class="fa-solid fa-house mr-1.5"></i> Home & About
-                    </button>
-                    <button onclick="switchTab('timeline')" id="tab-timeline" class="tab-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 text-skybrand-800 hover:text-skybrand-900 hover:bg-ice-200">
-                        <i class="fa-solid fa-calendar-days mr-1.5"></i> Festival Timeline
-                    </button>
-                    <button onclick="switchTab('submission')" id="tab-submission" class="tab-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 text-skybrand-800 hover:text-skybrand-900 hover:bg-ice-200">
-                        <i class="fa-solid fa-file-signature mr-1.5"></i> Submission Guide
-                    </button>
-                    <button onclick="switchTab('register')" id="tab-register" class="tab-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 text-skybrand-800 hover:text-skybrand-900 hover:bg-ice-200">
-                        <i class="fa-solid fa-pen-nib mr-1.5"></i> Registration
-                    </button>
-                    <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 text-skybrand-800 hover:text-skybrand-900 hover:bg-ice-200">
-                        <i class="fa-solid fa-address-book mr-1.5"></i> Contact & Partners
-                    </button>
-                    <button onclick="switchTab('delegates')" id="tab-delegates" class="tab-btn max-w-36 px-3 py-2 rounded-lg font-medium text-xs leading-tight transition-all duration-200 text-skybrand-800 hover:text-skybrand-900 hover:bg-ice-200">
-                        <i class="fa-solid fa-star mr-1"></i> List of 2026 Official Delegates
-                    </button>
-                </nav>
-
                 <!-- Mobile Menu Toggle Button -->
-                <div class="xl:hidden">
+                <div class="2xl:hidden">
                     <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-skybrand-900 hover:bg-ice-200 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
+
+            <!-- Desktop Navigation Tabs -->
+            <nav class="hidden 2xl:grid grid-cols-4 gap-2 pb-4" aria-label="Main navigation">
+                <button onclick="switchTab('home')" id="tab-home" class="tab-btn active flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i> Home & About
+                </button>
+                <button onclick="switchTab('timeline')" id="tab-timeline" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Festival Timeline
+                </button>
+                <button onclick="switchTab('submission')" id="tab-submission" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-file-signature" aria-hidden="true"></i> Submission Guide
+                </button>
+                <button onclick="switchTab('register')" id="tab-register" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-pen-nib" aria-hidden="true"></i> Registration
+                </button>
+                <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-address-book" aria-hidden="true"></i> Contact & Partners
+                </button>
+                <button onclick="switchTab('delegates')" id="tab-delegates" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i> List of 2026 Official Delegates
+                </button>
+                <button onclick="switchTab('photos')" id="tab-photos" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-camera" aria-hidden="true"></i> Event Photos
+                </button>
+                <button onclick="switchTab('news')" id="tab-news" class="tab-btn flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-skybrand-800 transition-all duration-200 hover:bg-ice-200 hover:text-skybrand-900">
+                    <i class="fa-solid fa-newspaper" aria-hidden="true"></i> News & Updates
+                </button>
+            </nav>
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden xl:hidden bg-[#E0F2FE] border-b border-ice-200 px-4 pt-2 pb-4 space-y-2">
+        <div id="mobile-menu" class="hidden 2xl:hidden bg-[#E0F2FE] border-b border-ice-200 px-4 pt-2 pb-4 space-y-2">
             <button onclick="switchTab('home'); toggleMobileMenu()" class="w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-skybrand-900 hover:bg-skybrand-600 hover:text-white">
                 <i class="fa-solid fa-house w-6"></i> Home & About
             </button>
@@ -252,6 +264,12 @@
             </button>
             <button onclick="switchTab('delegates'); toggleMobileMenu()" class="w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-skybrand-900 hover:bg-skybrand-600 hover:text-white">
                 <i class="fa-solid fa-star w-6"></i> List of 2026 Official Delegates
+            </button>
+            <button onclick="switchTab('photos'); toggleMobileMenu()" class="w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-skybrand-900 hover:bg-skybrand-600 hover:text-white">
+                <i class="fa-solid fa-camera w-6"></i> Event Photos
+            </button>
+            <button onclick="switchTab('news'); toggleMobileMenu()" class="w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-skybrand-900 hover:bg-skybrand-600 hover:text-white">
+                <i class="fa-solid fa-newspaper w-6"></i> News & Updates
             </button>
         </div>
     </header>
@@ -866,6 +884,69 @@
             </div>
         </section>
 
+        <!-- SECTION 7: EVENT PHOTOS -->
+        <section id="section-photos" class="hidden space-y-8">
+            <div class="rounded-3xl border border-ice-200 bg-white p-6 text-center shadow-sm sm:p-10">
+                <h3 class="mb-8 font-serif text-3xl font-bold text-skybrand-900">Event Photos</h3>
+                <div class="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <button type="button" onclick="openPhotoLightbox(this)" aria-label="Enlarge event photo 1" class="group block w-full overflow-hidden rounded-2xl border-2 border-ice-200 bg-black shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-skybrand-500 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skybrand-500 focus-visible:ring-offset-2">
+                        <img class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://i.ibb.co/zhB8gPsK/eventpic1.jpg" alt="Event photo 1">
+                    </button>
+                    <button type="button" onclick="openPhotoLightbox(this)" aria-label="Enlarge event photo 2" class="group block w-full overflow-hidden rounded-2xl border-2 border-ice-200 bg-black shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-skybrand-500 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skybrand-500 focus-visible:ring-offset-2">
+                        <img class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://i.ibb.co/j9C8kXxm/eventpic2.jpg" alt="Event photo 2">
+                    </button>
+                    <button type="button" onclick="openPhotoLightbox(this)" aria-label="Enlarge event photo 3" class="group block w-full overflow-hidden rounded-2xl border-2 border-ice-200 bg-black shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-skybrand-500 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skybrand-500 focus-visible:ring-offset-2">
+                        <img class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://i.ibb.co/VYBm1Y6D/eventpic3.jpg" alt="Event photo 3">
+                    </button>
+                    <button type="button" onclick="openPhotoLightbox(this)" aria-label="Enlarge event photo 4" class="group block w-full overflow-hidden rounded-2xl border-2 border-ice-200 bg-black shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-skybrand-500 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skybrand-500 focus-visible:ring-offset-2">
+                        <img class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://i.ibb.co/Jwrv8VWz/eventpic4.jpg" alt="Event photo 4">
+                    </button>
+                    <button type="button" onclick="openPhotoLightbox(this)" aria-label="Enlarge event photo 5" class="group block w-full overflow-hidden rounded-2xl border-2 border-ice-200 bg-black shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-skybrand-500 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skybrand-500 focus-visible:ring-offset-2">
+                        <img class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://i.ibb.co/bGgTFkz/eventpic5.jpg" alt="Event photo 5">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: NEWS & UPDATES -->
+        <section id="section-news" class="hidden">
+            <article class="mx-auto max-w-4xl rounded-3xl border border-ice-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
+                <header class="mb-8 border-b border-ice-200 pb-6">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-ice-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-skybrand-700">
+                        <i class="fa-solid fa-newspaper" aria-hidden="true"></i> News & Updates
+                    </span>
+                    <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-skybrand-900 sm:text-4xl">
+                        BigBooks Storytelling Festival Opens Development Journey for Nine Young Authors
+                    </h2>
+                </header>
+                <div class="space-y-5 text-sm leading-8 text-skybrand-800 sm:text-base">
+                    <p>Iloilo City - Proyekto Volunteers Network (PVN), in partnership with the Iloilo Provincial Library and Archives and the Rotary Club of Iloilo City, launched the development phase of the BigBooks Storytelling Festival: Young Storytellers Development Program through a series of workshops held on October 24, 2026, at Casa Real (Old Capitol), Iloilo Provincial Capitol, Iloilo City.</p>
+
+                    <p>The workshops served as the program’s starting activity for nine officially selected young authors, providing them with opportunities to develop their original stories, explore digital storytelling, and strengthen their storytelling performance skills. More than a conventional storytelling competition, the initiative is designed as a development program that nurtures young storytellers from the initial stages of story creation through the production of storybooks and the eventual presentation of their works to young readers.</p>
+
+                    <p>PVN Chairman Daniel “Kuya D” Agan delivered the opening message, introducing the program’s objectives and emphasizing its potential impact on young people and the wider community. He highlighted the importance of creating opportunities for aspiring storytellers to develop their creativity, communicate ideas effectively, and contribute to literacy development through meaningful and engaging stories.</p>
+
+                    <p>Iloilo Provincial Library and Archives Department Head Allana Delgado welcomed the delegates and expressed the institution’s support for the initiative. She also shared the library’s vision for the program, underscoring the importance of providing young people with opportunities to explore storytelling, cultivate their literary interests, and participate in initiatives that promote a stronger reading culture.</p>
+
+                    <p>Rotary Club of Iloilo City President Reynaldo Tenedero likewise conveyed the club’s message of support and shared the motivation behind Rotary’s participation in the program. The partnership reflects a shared commitment to youth development, education, and community service, recognizing the role that storytelling and literacy initiatives can play in empowering young people and reaching children through creative learning experiences.</p>
+
+                    <p>The day’s activities featured three workshops designed to guide the delegates through essential aspects of storytelling development. The Story Development Workshop focused on strengthening the participants’ original stories, helping them refine their ideas, develop their narratives, and communicate their intended messages more effectively. The Digital Storybook Development Workshop introduced the process of translating written stories into digital formats, integrating storytelling with visual creativity and digital communication.</p>
+
+                    <p>Meanwhile, the Storytelling Performance Workshop provided opportunities for the delegates to explore the delivery and presentation of stories, preparing them to engage audiences through expressive and interactive storytelling.</p>
+
+                    <p>Following the workshop activities, nine initial stories were officially selected for the next phase of the program. These stories will serve as the foundation for the development of digital storybooks, allowing the young authors to further refine and present their works through a combination of written narratives and visual elements.</p>
+
+                    <p>The next phase will focus on digital storybook development, scheduled from October 25 to November 5, 2026. The completed submissions will undergo evaluation, with finalists scheduled to be identified on November 7. From November 8 to 20, the selected works will proceed to the production of physical BigBooks, bringing the young authors’ stories into a tangible format that can be shared with readers.</p>
+
+                    <p>The program will then move to a caravan scheduled on November 27, providing an opportunity to showcase the developed works and recognize the creativity and efforts of the participating young authors. The festival will culminate on November 28, 2026, with storytelling activities, performance evaluation, awarding, and documentation.</p>
+
+                    <p>Through the collaboration of PVN, the Iloilo Provincial Library and Archives, and the Rotary Club of Iloilo City, the BigBooks Storytelling Festival: Young Storytellers Development Program seeks to establish a meaningful pathway for young people to develop their storytelling abilities, produce original literary works, and contribute to children's engagement with stories and reading.</p>
+
+                    <p>By combining creative writing, digital production, and performance, the program aims to transform storytelling from a single competitive activity into a sustained learning experience, one that equips young authors with practical skills, encourages creative expression, and opens opportunities for their stories to reach and inspire young readers.</p>
+                </div>
+            </article>
+        </section>
+
     </main>
 
     <!-- SUCCESS CONFIRMATION MODAL -->
@@ -881,6 +962,16 @@
             <button onclick="closeModal()" class="w-full py-3 bg-skybrand-600 hover:bg-skybrand-700 text-white font-bold rounded-xl text-sm transition-all">
                 Close Confirmation
             </button>
+        </div>
+    </div>
+
+    <!-- EVENT PHOTO LIGHTBOX -->
+    <div id="photo-lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-skybrand-900/90 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Enlarged event photo" onclick="closePhotoLightbox()">
+        <div class="relative max-h-full max-w-full" onclick="event.stopPropagation()">
+            <button type="button" onclick="closePhotoLightbox()" aria-label="Close enlarged photo" class="absolute -right-3 -top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-ice-200 bg-white text-xl text-skybrand-900 shadow-lg transition-all hover:bg-ice-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sunshine-400">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <img id="lightbox-photo" class="max-h-[85vh] max-w-[90vw] rounded-xl border-2 border-white/80 object-contain shadow-2xl" src="" alt="">
         </div>
     </div>
 
@@ -901,7 +992,7 @@
                 return;
             }
 
-            const sections = ['home', 'timeline', 'submission', 'register', 'contact', 'delegates'];
+            const sections = ['home', 'timeline', 'submission', 'register', 'contact', 'delegates', 'photos', 'news'];
             
             sections.forEach(id => {
                 const section = document.getElementById(`section-${id}`);
@@ -944,6 +1035,37 @@
             const modal = document.getElementById('success-modal');
             modal.classList.add('hidden');
         }
+
+        let lastPhotoTrigger = null;
+
+        function openPhotoLightbox(button) {
+            const photo = button.querySelector('img');
+            const lightbox = document.getElementById('photo-lightbox');
+            const lightboxPhoto = document.getElementById('lightbox-photo');
+
+            lastPhotoTrigger = button;
+            lightboxPhoto.src = photo.src;
+            lightboxPhoto.alt = photo.alt;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            lightbox.querySelector('button').focus();
+        }
+
+        function closePhotoLightbox() {
+            const lightbox = document.getElementById('photo-lightbox');
+
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            if (lastPhotoTrigger) lastPhotoTrigger.focus();
+        }
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && !document.getElementById('photo-lightbox').classList.contains('hidden')) {
+                closePhotoLightbox();
+            }
+        });
     </script>
 </body>
 </html>
